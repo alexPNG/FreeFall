@@ -9,6 +9,7 @@ Original project by Steven Rolfe:
 
 ## What's different in my fork?
 Added support for arm64e devices and iOS 13.
+Added new depictions for Cydia/Zebra and Sileo/Installer.
 
 ## How can I install this on my device?
 Visit or add my repository to your package manager:
