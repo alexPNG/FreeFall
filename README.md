@@ -12,6 +12,7 @@ Original project by Steven Rolfe:
 **v2.1:**
 - Added a toggle in the preferences pane to easily enable/disable FreeFall *(no respring required when using the toggle)*.
 
+
 **v2.0:**
 - Added support for arm64e devices and iOS 13, also added new depictions for Cydia/Zebra and Sileo/Installer.
 
