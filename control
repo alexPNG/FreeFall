@@ -1,0 +1,12 @@
+Package: com.chewmieser.freefall
+Name: FreeFall
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Phone screams when dropped!
+Maintainer: Steven Rolfe
+Author: Steven Rolfe
+Section: Tweaks
+Depiction: https://alexpng.github.io/depictions/com.chewmieser.freefall/
+Icon: https://alexpng.github.io/depictions/com.chewmieser.freefall/DebIcon.png
+SileoDepiction: https://alexpng.github.io/depictions/com.chewmieser.freefall/freefall.json
+Version: 2.1

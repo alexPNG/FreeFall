@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+       <dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Use this option to enable/disable the tweak.</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.chewmieser.freefall.prefs-changed</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chewmieser.freefall</string>
+			<key>key</key>
+			<string>useFreeFall</string>
+			<key>label</key>
+			<string>Enable FreeFall</string>
+       </dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.chewmieser.freefall.prefs-changed</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>WilhelmScream.wav</string>
+			<key>defaults</key>
+			<string>com.chewmieser.freefall</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>fallingSound</string>
+			<key>label</key>
+			<string>Falling Sound</string>
+			<key>set</key>
+			<string>previewAndSet:forSpecifier:</string>
+			<key>titlesDataSource</key>
+			<string>getValues:</string>
+			<key>valuesDataSource</key>
+			<string>getValues:</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.chewmieser.freefall.prefs-changed</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<string>0.04</string>
+			<key>defaults</key>
+			<string>com.chewmieser.freefall</string>
+			<key>key</key>
+			<string>fallingSensitivity</string>
+			<key>max</key>
+			<string>0.10</string>
+			<key>min</key>
+			<string>0.00</string>
+			<key>showValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>End free-fall sensitivity</string>
+			<key>label</key>
+			<string>After free-fall sound</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.chewmieser.freefall.prefs-changed</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>None</string>
+			<key>defaults</key>
+			<string>com.chewmieser.freefall</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>stoppingSound</string>
+			<key>label</key>
+			<string>Stopping Sound</string>
+			<key>set</key>
+			<string>previewAndSet:forSpecifier:</string>
+			<key>titlesDataSource</key>
+			<string>getValues:</string>
+			<key>valuesDataSource</key>
+			<string>getValues:</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.chewmieser.freefall.prefs-changed</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<string>6.0</string>
+			<key>defaults</key>
+			<string>com.chewmieser.freefall</string>
+			<key>key</key>
+			<string>stoppingSensitivity</string>
+			<key>max</key>
+			<string>9.8</string>
+			<key>min</key>
+			<string>5.0</string>
+			<key>showValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Sounds can be placed in /Library/FreeFall</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>Idea by Randall Munroe</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>Created by Steve Rolfe (Chewmieser)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Fall detection sensitivity</string>
+			<key>label</key>
+			<string>Free-Fall Sound</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>FreeFall</string>
+</dict>
+</plist>
