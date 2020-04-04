@@ -8,7 +8,12 @@ Original project by Steven Rolfe:
 [https://github.com/srolfe/tweaks/tree/master/freefall](https://github.com/srolfe/tweaks/tree/master/freefall)
 
 ## What's different in my fork?
-Added support for arm64e devices and iOS 13, also added new depictions for Cydia/Zebra and Sileo/Installer.
+
+**v2.1:**
+- Added a toggle in the preferences pane to easily enable/disable FreeFall *(no respring required when using the toggle)*.
+
+**v2.0:**
+- Added support for arm64e devices and iOS 13, also added new depictions for Cydia/Zebra and Sileo/Installer.
 
 ## How can I install this on my device?
 Visit or add my repository to your package manager:
