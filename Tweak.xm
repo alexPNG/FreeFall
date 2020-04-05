@@ -10,25 +10,6 @@ static BOOL useFreeFall;
 // Reference to our FreeFall object
 FreeFall *freeFallController;
 
-// Preferences Update
-static void refreshPrefs() {
-	CFArrayRef keyList = CFPreferencesCopyKeyList(CFSTR("com.chewmieser.freefall"), kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-	if (keyList) {
-		settings = (NSMutableDictionary *)CFBridgingRelease(CFPreferencesCopyMultiple(keyList, CFSTR("com.chewmieser.freefall"), kCFPreferencesCurrentUser, kCFPreferencesAnyHost));
-		CFRelease(keyList);
-	} else {
-		settings = nil;
-	}
-	if (!settings) {
-		settings = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.chewmieser.freefall.plist"];
-	}
-	useFreeFall = [([settings objectForKey:@"useFreeFall"] ?: @(NO)) boolValue];
-	}
-
-static void PreferencesChangedCallback(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
-  refreshPrefs();
-}
-
 @implementation FreeFall
 	@synthesize prefs;
 	
@@ -57,6 +38,8 @@ static void PreferencesChangedCallback(CFNotificationCenterRef center, void *obs
 		prefs=[[NSDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.chewmieser.freefall.plist"];
 		fallSensitivity=[[[self prefs] objectForKey:@"fallingSensitivity"] doubleValue] ?: 0.04;
 		stopSensitivity=[[[self prefs] objectForKey:@"stoppingSensitivity"] doubleValue] ?: 6.0;
+	useFreeFall = [([settings objectForKey:@"useFreeFall"] ?: @(YES)) boolValue];
+
 		
 		// Setup falling sound
 		fallPref=[[self prefs] objectForKey:@"fallingSound"];
@@ -144,9 +127,4 @@ __attribute__((constructor)) static void init() {
 	
 	// Handle preference changes. I’ll clean this later
 	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, PreferencesChanged, CFSTR("com.chewmieser.freefall.prefs-changed"), NULL, CFNotificationSuspensionBehaviorCoalesce);
-}
-
-%ctor {
-	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback) PreferencesChangedCallback, CFSTR("com.chewmieser.freefall.prefs-changed"), NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
-	refreshPrefs();
 }
