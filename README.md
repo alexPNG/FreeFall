@@ -1,3 +1,4 @@
+[![GitHub forks](https://img.shields.io/github/license/alexPNG/FreeFall.svg?style=for-the-badge)](https://github.com/alexPNG/FreeFall/license) 
 # FreeFall
 By Steven Rolfe - Make your device scream when you drop it.
 
